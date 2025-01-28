@@ -137,7 +137,7 @@ LIMIT 1
 
 The product category that generated the highest total revenue is Lights with a total of 7910.40
 
-### 8. Which country has the highest average order value, and what is the average amount??
+### 8. Which country has the highest average order value, and what is the average amount?
 ````sql
 SELECT ship_country, AVG(item_total) AS average_amount
 FROM etsysales
