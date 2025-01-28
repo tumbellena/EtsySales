@@ -31,6 +31,25 @@ ALTER TABLE etsysales
     ALTER COLUMN transaction_id TYPE BIGINT;
 ````
 
+-- Add day_name column
+````sql
+SELECT sale_date, TO_CHAR (sale_date, 'FMDay') AS day_name
+FROM etsysales;
+````
+
+````sql	
+ALTER TABLE etsysales ADD COLUMN day_name VARCHAR(10);
+````
+
+````sql
+UPDATE etsysales
+SET day_name = TO_CHAR(sale_date, 'FMDay');
+````
+
+## 📌 Solution
+
+
+
 
 
 
